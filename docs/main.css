@@ -1,0 +1,32 @@
+.start {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.range {
+  background-color: red;
+  width: 90%;
+  display: inline-block;
+  position: relative;
+}
+
+.range .min {
+  padding-right: 10px;
+}
+.range .max {
+  padding-left: 10px;  
+}
+.range .good {
+  background-color: green;
+  display: inline-block;
+}
+.range .min-guess {
+  position: absolute;
+  top: 0;
+  padding-right: 2px;
+}
+.range .max-guess {
+  position: absolute;
+  top: 0;
+  padding-left: 2px;
+}

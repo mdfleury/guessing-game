@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <link type="text/css" rel="stylesheet" href="main.css" media="all" />
+    </head>
+    <body>
+        <div id="app">
+            <input class="start" v-on:click="start" type="submit" value="Start!" />
+            <div v-if="secret !== 0" id="guesses">Guesses: {{count}}</div>
+            <!--<div id="secret">{{secret}}</div>-->
+            <div id="message">{{message}}</div>
+            <form v-on:submit='submitGuess'>
+                <label for="guess">Guess?</label>
+                <input v-bind:disabled="disabled" v-model="guess" id="guess" />
+                <input v-bind:disabled="disabled" type="submit" />
+            </form>
+            <div v-if="secret" class="wrapper">
+                <span class="min">{{min}}</span>
+                <span class="range">
+                    <span class="min-guess" v-if="minGuess != (min - 1)" v-bind:style="{ right: (100 - minGuess) + '%' }">{{minGuess}}</span>
+                    <span class="good" v-bind:style="{ width: (maxGuess - minGuess) + '%', marginLeft: (minGuess) + '%' }">&nbsp;</span>
+                    <span class="max-guess" v-if="maxGuess != max">{{maxGuess}}</span>
+                </span>
+                <span class="max">{{max}}</span>
+            </div>
+        </div>
+        <script src="vue.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
