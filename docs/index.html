@@ -12,7 +12,7 @@
             <div id="message">{{message}}</div>
             <form v-on:submit='submitGuess'>
                 <label for="guess">Guess?</label>
-                <input v-bind:disabled="disabled" v-model="guess" id="guess" />
+                <input v-bind:disabled="disabled" v-model="guess" id="guess" type="number" />
                 <input v-bind:disabled="disabled" type="submit" />
             </form>
             <div v-if="secret" class="wrapper">

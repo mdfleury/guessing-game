@@ -21,7 +21,7 @@ var app = new Vue({
       this.minGuess = this.min - 1;
       this.secret = Math.floor(Math.random() * (this.max - this.min) + this.min);
     },
-    submitGuess: function() {
+    submitGuess: function(event) {
       event.preventDefault();
       if (this.guess == 0) return;
       this.count++;
