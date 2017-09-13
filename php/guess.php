@@ -13,27 +13,27 @@ $guesses = 0;
 echo "The secret number is: $secret_number" . PHP_EOL;
 
 while (TRUE) {
-	$guesses++;
+    $guesses++;
 
     echo "Please input your guess." . PHP_EOL;
 
     $guess = (int)fgets(STDIN);
 
     if ($guess === 0) {
-    	continue;
+        continue;
     }
 
     echo "You guessed: $guess" . PHP_EOL;
 
     switch ($guess <=> $secret_number) {
-    	case -1:
-    		echo 'too small' . PHP_EOL;
-    		continue;
-    	case 1:
-    		echo 'too big' . PHP_EOL;
-    		continue;
-    	case 0:
-        	echo "You win! $guesses guesses!" . PHP_EOL;
+        case -1:
+            echo 'too small' . PHP_EOL;
+            continue;
+        case 1:
+            echo 'too big' . PHP_EOL;
+            continue;
+        case 0:
+            echo "You win! $guesses guesses!" . PHP_EOL;
             break 2;
     }
 }
