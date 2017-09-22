@@ -23,7 +23,7 @@ var app = new Vue({
     },
     submitGuess: function(event) {
       event.preventDefault();
-      if (this.guess == 0) return;
+      if (this.guess === 0) return;
       this.count++;
       switch (true) {
         case this.secret == this.guess:
@@ -47,4 +47,4 @@ var app = new Vue({
       }
     }
   }
-})
+});

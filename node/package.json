@@ -1,0 +1,7 @@
+{
+  "name": "guessing-game",
+  "version": "1.0.0",
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}
